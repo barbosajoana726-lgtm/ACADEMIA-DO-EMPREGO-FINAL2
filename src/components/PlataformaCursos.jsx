@@ -2,32 +2,60 @@ export default function PlataformaCursos() {
   const cursos = [
     {
       titulo: "Emprego Administrativo do Zero",
-      descricao: "Aprenda tudo para conquistar seu primeiro emprego administrativo mesmo sem experiência.",
-      preco: "R$ 97,00"
+      descricao:
+        "Aprenda tudo para conquistar seu primeiro emprego administrativo mesmo sem experiência.",
+      preco: "R$ 97,00",
+      link: "https://pay.kiwify.com.br/sBqzTrQ"
     },
     {
       titulo: "Contabilidade na Prática",
-      descricao: "Aprenda contabilidade do zero de forma simples e prática.",
-      preco: "R$ 97,00"
+      descricao:
+        "Aprenda contabilidade do zero de forma simples e prática para o mercado de trabalho.",
+      preco: "R$ 97,00",
+      link: "https://pay.kiwify.com.br/FPmPAMk"
     },
     {
       titulo: "Pacote Emprego Garantido",
-      descricao: "Combo com Administração + Contabilidade + Certificados.",
-      preco: "R$ 147,00"
+      descricao:
+        "Combo completo com Administração + Contabilidade + Certificados inclusos.",
+      preco: "R$ 147,00",
+      link: "https://pay.kiwify.com.br/YtQHGG6"
     }
   ];
 
   return (
-    <div style={{ padding: "40px", fontFamily: "Arial", background: "#fff0f6", minHeight: "100vh" }}>
-      <h1 style={{ textAlign: "center", color: "#e91e63" }}>
+    <div
+      style={{
+        padding: "40px",
+        fontFamily: "Arial",
+        background: "#fff0f6",
+        minHeight: "100vh"
+      }}
+    >
+      <h1
+        style={{
+          textAlign: "center",
+          color: "#e91e63"
+        }}
+      >
         Academia do Emprego
       </h1>
 
-      <p style={{ textAlign: "center", marginBottom: "40px" }}>
+      <p
+        style={{
+          textAlign: "center",
+          marginBottom: "40px"
+        }}
+      >
         Cursos profissionais para entrar no mercado de trabalho
       </p>
 
-      <div style={{ display: "grid", gap: "20px" }}>
+      <div
+        style={{
+          display: "grid",
+          gap: "20px"
+        }}
+      >
         {cursos.map((curso, index) => (
           <div
             key={index}
@@ -38,10 +66,20 @@ export default function PlataformaCursos() {
               boxShadow: "0 4px 12px rgba(0,0,0,0.08)"
             }}
           >
-            <h2 style={{ color: "#d81b60" }}>{curso.titulo}</h2>
+            <h2
+              style={{
+                color: "#d81b60"
+              }}
+            >
+              {curso.titulo}
+            </h2>
+
             <p>{curso.descricao}</p>
+
             <h3>{curso.preco}</h3>
+
             <button
+              onClick={() => window.location.href = curso.link}
               style={{
                 background: "#e91e63",
                 color: "white",
